@@ -1,0 +1,31 @@
+# This file is a general .ucf for Nexys3 rev B board
+## To use it in a project:
+## - remove or comment the lines corresponding to unused pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "PCLK"            LOC = "V10" | IOSTANDARD = "LVCMOS33"; 
+
+
+## Leds
+NET "READOUT[0]"        LOC = "U16" | IOSTANDARD = "LVCMOS33";  
+NET "READOUT[1]"        LOC = "V16" | IOSTANDARD = "LVCMOS33";  
+NET "PWDATA[0]"         LOC = "U15" | IOSTANDARD = "LVCMOS33"; 
+NET "PWDATA[1]"         LOC = "V15" | IOSTANDARD = "LVCMOS33"; 
+NET "PSEL"       	      LOC = "M11" | IOSTANDARD = "LVCMOS33";   
+NET "PENABLE"             LOC = "N11" | IOSTANDARD = "LVCMOS33";   
+NET "PADDR[0]"           LOC = "R11" | IOSTANDARD = "LVCMOS33";  
+NET "PADDR[1]"           LOC = "T11" | IOSTANDARD = "LVCMOS33"; 
+
+
+## Switches
+NET "datatowrite[0]"          LOC = "T10" | IOSTANDARD = "LVCMOS33";   
+NET "datatowrite[1]"          LOC = "T9"  | IOSTANDARD = "LVCMOS33";   
+NET "PWRITE"         	           LOC = "V9"  | IOSTANDARD = "LVCMOS33";   
+NET "PREADY"                   LOC = "M8"  | IOSTANDARD = "LVCMOS33";   
+NET "transfer"                    LOC = "N8"  | IOSTANDARD = "LVCMOS33"; 
+NET "PRDATA[0]"              LOC = "U8"  | IOSTANDARD = "LVCMOS33";  
+NET "PRDATA[1]"              LOC = "V8"  | IOSTANDARD = "LVCMOS33";   
+NET "PRESETn"                  LOC = "T5"  | IOSTANDARD = "LVCMOS33";   
+
+NET "PRESETn" CLOCK_DEDICATED_ROUTE = FALSE;
